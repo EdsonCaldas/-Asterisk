@@ -1,7 +1,7 @@
 # -Asterisk
-How to enable video calling in Asterisk
+Como habilitar videochamadas no Asterisk
 
-These codecs do not need to be installed, they are already included in Asterisk by default, however, if you do not, follow the instructions below with the necessary changes.
+Esses codecs não precisam ser instalados, eles já estão incluídos no Asterisk por padrão, no entanto, se você não fizer isso, siga as instruções abaixo com as alterações necessárias.
 
 1- Instale o software Asterisk PABX
 
