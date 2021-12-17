@@ -3,15 +3,15 @@ How to enable video calling in Asterisk
 
 These codecs do not need to be installed, they are already included in Asterisk by default, however, if you do not, follow the instructions below with the necessary changes.
 
-1- Install Asterisk PABX software
+1- Instale o software Asterisk PABX
 
-2- If the video call option is not enabled in the GUI, the options area displays one of the h261, h263, h263p, h264 or mpeg4 video compression standards, you will need to make changes or add a file to the folder. .conf and one more in extension.conf
+2- Se a opção de videochamada não estiver habilitada na GUI, a área de opções exibe um dos padrões de compressão de vídeo h261, h263, h263p, h264 ou mpeg4, você precisará fazer alterações ou adicionar um arquivo à pasta. .conf e mais um em extension.conf
 
-3- Making changes to the .conf file
+3- Fazendo alterações no arquivo .conf
 
-3.1 - open terminal and enter root path vi /etc/asterisk/sip.conf, if vi doesn't work try vim, this command will open this folder in preview mode and press Enter to access the folder
+3.1 - abra o terminal e insira o caminho raiz vi /etc/asterisk/sip.conf, se o vi não funcionar, tente o vim, este comando irá abrir esta pasta no modo de visualização e pressione Enter para acessar a pasta
 
-3.2- enter i to enable insertion, if no file, add below text at the end of the documentation by clicking the down arrow
+3.2- digite i para habilitar a inserção, se não houver arquivo, adicione o texto abaixo no final da documentação clicando na seta para baixo
 
 context = default
 bindaddr = 0.0.0.0
@@ -53,11 +53,11 @@ qualify = yes
 allow = all
 videosupport = yes
 
-Then type esc and type: qw to exit and save changes: w to save: q! to exit without saving changes and just: q to exit
+Em seguida, digite esc e digite: qw para sair e salvar as alterações: w para salvar: q! para sair sem salvar as alterações e apenas: q para sair
 
-3.3- after entering vi /etc/asterisk/extensions.conf to access
+3.3- depois de entrar em vi /etc/asterisk/extensions.conf para acessar
 
-3.4- Down arrow or page down key to add the file below at the end of the code.
+3.4- Seta para baixo ou tecla de página para baixo para adicionar o arquivo abaixo no final do código.
 
 [interior]
 exten => 1000.1, dial (SIP / 1000.25)
@@ -67,4 +67,4 @@ exten => 1000.2, Hang
 exten => 1002.1, dial (SIP / 1002.25)
 exten => 1002.2, Hang
 
-4} After typing service asterisk restart and restarting, the configuration programs will be added to the interface.
+4. Após digitar serviço asterisco reiniciar e reiniciar, os programas de configuração serão adicionados à interface.
